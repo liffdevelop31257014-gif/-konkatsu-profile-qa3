@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>婚活自己開示QA Part1</title>
+<title>婚活自己開示QA Part3</title>
 
 <link rel="stylesheet" href="style.css"/>
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
@@ -13,205 +13,247 @@
 
 <div class="container">
 
-  <!-- タイトル -->
-  <div class="form-header">
+ <!-- タイトル -->
+ <div class="form-header">
 
-    <h1>婚活 自己開示QA Part1</h1>
+   <h1>婚活 自己開示QA Part3</h1>
 
-    <p class="form-description">
-      本アンケートは、婚活・交際前の自己開示を目的としています。<br>
-      プライバシー保護：LINE IDはハッシュ化（暗号化）して保存されます。表示名・プロフィール画像・メールアドレスなどは取得されません。<br>
-      再回答について：同じLINEアカウントから回答された場合、以前の内容は上書きされます。
-    </p>
+   <p class="form-description">
+     本アンケートは、婚活・交際前の自己開示を目的としています。<br>
+     プライバシー保護：LINE IDはハッシュ化（暗号化）して保存されます。表示名・プロフィール画像・メールアドレスなどは取得されません。<br>
+     再回答について：同じLINEアカウントから回答された場合、以前の内容は上書きされます。
+   </p>
 
-  </div>
+ </div>
 
-  <!-- Q1 -->
-  <label>Q1 朝起きる時間は何時ですか？</label>
-  <input type="time" id="q1">
-
-  <!-- Q2 -->
-  <label>Q2 夜寝る時間は何時ですか？</label>
-  <input type="time" id="q2">
-
-  <!-- Q3 -->
-  <label>
-    Q3 仕事終わり、どんな過ごし方をしていますか？
-    将来の理想ではなく今どんな過ごし方を教えてください。
-  </label>
-  <textarea id="q3"></textarea>
-
-  <!-- Q4 -->
-  <label>
-    Q4 平日の朝いつもつけているニュース/ワイドショー番組はありますか？
-    あればどのチャンネル、番組名を教えてください。
-  </label>
-
-  <label>
-  <input type="radio" name="q4" value="yes">
-  あり
-</label>
+ <!-- Q1 -->
+ <label>Q1 会社でどんなことを褒められますか？また、注意されることはなんですか？</label>
 
 <textarea
-  id="q4Detail"
+  id="q1good"
   class="detail-textarea"
-  placeholder="番組名"
+  placeholder="褒められること"
 ></textarea>
-
-<label>
-  <input type="radio" name="q4" value="no">
-  なし
-</label>
-
-  <!-- Q5 -->
-  <label>Q5 子どもの頃好きだったテレビ番組は何ですか？</label>
-  <input type="text" id="q5">
-
-  <!-- Q6 -->
-  <label>Q6 これまでに呼ばれたことのあるあだ名は何ですか？</label>
-  <input type="text" id="q6">
-
-  <!-- Q7 -->
-  <label>
-    Q7 MBTI診断したことはありますか？
-    あればどのタイプだったか教えてください。
-  </label>
-
-  <label>
-  <input type="radio" name="q7" value="yes">
-  あり
-</label>
 
 <textarea
-  id="q7Detail"
+  id="q1bad"
   class="detail-textarea"
-  placeholder="MBTIタイプ"
+  placeholder="注意されること"
 ></textarea>
 
+
+ <!-- Q2 -->
+ <label>友人や元恋人からどんなことを褒められますか？また、注意されることはなんですか？</label>
+ <textarea
+  id="q2good"
+  class="detail-textarea"
+  placeholder="褒められること"
+></textarea>
+
+<textarea
+  id="q2bad"
+  class="detail-textarea"
+  placeholder="注意されること"
+></textarea>
+
+ <!-- Q3 -->
+ <label>
+   Q3 次の働き方・休暇について、もし実現できたら嬉しい順に選択してください。<br>
+ただし、給料や日々の残業などは今と変わらないものとして考えてください。<br>
+（タップした順番が順位になります）
+ </label>
+ <div id="q3Ranking" class="ranking-group">
+
+<button type="button" class="rank-option" data-value="水土日の週休3日制">
+<span class="rank-number"></span>
+水土日の週休3日制
+</button>
+
+<button type="button" class="rank-option" data-value="金土日の週休3日制">
+<span class="rank-number"></span>
+金土日の週休3日制
+</button>
+
+<button type="button" class="rank-option" data-value="休みは変わらず1日の労働時間が5～6時間になる">
+<span class="rank-number"></span>
+休みは変わらず1日の労働時間が5～6時間になる
+</button>
+
+<button type="button" class="rank-option" data-value="大型連休の回数が増える">
+<span class="rank-number"></span>
+大型連休の回数が増える
+</button>
+
+<button type="button" class="rank-option" data-value="まるまる1ヶ月GWになる">
+<span class="rank-number"></span>
+まるまる1ヶ月GWになる 
+</button>
+
+</div>
+
+ <!-- Q4 -->
+ <label>
+   Q4 次の中でも手に入るとしたら嬉しい順に選択ください。<br>
+（タップした順番が順位になります）
+ </label>
+
+<div id="q4Ranking" class="ranking-group">
+
+<button type="button" class="rank-option" data-value="老若男女問わず褒められる">
+<span class="rank-number"></span>
+老若男女問わず褒められる
+</button>
+
+<button type="button" class="rank-option" data-value="食事や運動に気をつけなくても維持できる理想的な体型">
+<span class="rank-number"></span>
+食事や運動に気をつけなくても維持できる理想的な体型
+</button>
+
+<button type="button" class="rank-option" data-value="地頭の良さ">
+<span class="rank-number"></span>
+地頭の良さ
+</button>
+
+<button type="button" class="rank-option" data-value="運動神経">
+<span class="rank-number"></span>
+運動神経
+</button>
+
+<button type="button" class="rank-option" data-value="お金を稼ぐ能力の高さ">
+<span class="rank-number"></span>
+お金を稼ぐ能力の高さ
+</button>
+
+<button type="button" class="rank-option" data-value="誰とでもすぐ打ち解けられ好かれるコミュニケーション能力">
+<span class="rank-number"></span>
+誰とでもすぐ打ち解けられ好かれるコミュニケーション能力
+</button>
+
+<button type="button" class="rank-option" data-value="アルコールへの耐性">
+<span class="rank-number"></span>
+アルコールへの耐性
+</button>
+
+<button type="button" class="rank-option" data-value="体力">
+<span class="rank-number"></span>
+体力 
+</button>
+
+<button type="button" class="rank-option" data-value="何があっても落ち込まないメンタルの強さ">
+<span class="rank-number"></span>
+何があっても落ち込まないメンタルの強さ
+</button>
+
+</div>
+
+ <!-- Q5 -->
+ <label>Q5 結婚したら2人でしたいことは何ですか？</label>
+ <textarea id="q5"></textarea>
+
+ <!-- Q6 -->
+ <label>Q6 子どもが生まれたら家族でしたいことは何ですか？</label>
+  <textarea id="q6"></textarea>
+
+ <!-- Q7 -->
+ <label>
+   Q7 小学校低学年の息子がいます。学校での様子を聞くと友人もいて楽しく過ごしているようです。<br>
+学校終わりや週末は家の中で1人でゲームをしたり動画を見ているだけなので習い事に通わせようか迷っています。<br>
+本人には習い事に興味がないか聞きましたが、今は興味がないと言われました。<br>
+このときどうしますか？
+ </label>
+
+  <label>
+   <input type="radio" name="q7" value="a7-1">
+   同年代男子に人気な習い事を調べていくつか見学に連れて行く
+ </label>
+
+ <label>
+   <input type="radio" name="q7" value="a7-2">
+   同年代男子に人気な習い事を調べて資料を見せる
+ </label>
+
+ <label>
+   <input type="radio" name="q7" value="a7-3">
+   自分が過去に通っていた習い事の話をしてみる
+ </label>
+
+ <label>
+   <input type="radio" name="q7" value="a7-4">
+   興味がわいたら通わせられるように準備をしつつ今は息子にはこれ以上声かけはしない
+ </label>
+
+  <label>
+   <input type="radio" name="q7" value="a7-5">
+   子どもをもつことは考えていない
+ </label>
+
+ <!-- Q8 -->
+ <label>Q8 高校生の娘がいます。この子は今まで非行に走ったことなどはありません。<br>
+たまたま夫婦ともに夜遅くなる日ができてしまいました。<br>
+いつもは娘の塾が21時に終わるので迎えに行っていましたが、この日はどうしますか？</label>
+
 <label>
-  <input type="radio" name="q7" value="no">
-  なし
-</label>
+   <input type="radio" name="q8" value="a8-1">
+   その日だけは娘1人で帰らせる
+ </label>
 
-  <!-- Q8 -->
-  <label>Q8 ポジティブですか？ネガティブですか？</label>
+ <label>
+   <input type="radio" name="q8" value="a8-2">
+   親戚か友人などに迎えに行ってもらうように頼む
+ </label>
 
-  <div class="slider-labels">
-    <span>ネガティブ</span>
-    <span>ポジティブ</span>
-  </div>
+<label>
+   <input type="radio" name="q8" value="a8-3">
+   送迎サービスを探し、お金を払って利用する
+ </label>
 
-  <input type="range" id="q8" min="1" max="5" step="1">
+ <label>
+   <input type="radio" name="q8" value="a8-4">
+   夫婦どちらかは間に合うように何がなんでも調整する
+ </label>
 
-  <!-- Q9 -->
-  <label>Q9 周囲の感情などを察する方ですか？</label>
 
-  <div class="slider-labels">
-    <span>察さない</span>
-    <span>察する</span>
-  </div>
-
-  <input type="range" id="q9" min="1" max="5" step="1">
-
-  <!-- Q10 -->
-  <label>Q10 部活動、サークル活動は何をしていましたか？</label>
-  <input type="text" id="q10">
-
-  <!-- Q11 -->
-  <label>Q11 どんなバイトをしたことがありますか？</label>
-  <input type="text" id="q11">
-
-  <!-- Q12 -->
-  <label>
-    Q12 休みの日に友人や家族と会うことはありますか？
-    ある場合はどんなことをすることが多いですか？
-  </label>
-  <textarea id="q12"></textarea>
-
-  <!-- Q13 -->
-  <label>
-    Q13 1人で過ごす時の休みの日の過ごし方を教えてください。
-  </label>
-  <textarea id="q13"></textarea>
-
-  <!-- Q14 -->
-  <label>Q14 LINEの頻度はどれくらいが理想ですか？</label>
-
-  <label>
-    <input type="radio" name="q14" value="a14-1">
-    返信まで6時間以内（朝LINEしたら昼までには返してほしい）
-  </label>
-
-  <label>
-    <input type="radio" name="q14" value="a14-2">
-    返信まで12時間以内（朝LINEしたら夜までには返してほしい）
-  </label>
-
-  <label>
-    <input type="radio" name="q14" value="a14-3">
-    返信まで24時間以内（朝LINEしたら翌朝までには返してほしい）
-  </label>
-
-  <label>
-    <input type="radio" name="q14" value="a14-4">
-    返信まで3日以内
-  </label>
-
-  <label>
-    <input type="radio" name="q14" value="a14-5">
-    相談事項には返信してほしいが雑談LINEには返信はあってもなくてもよい
-  </label>
-
-  <label>
-    <input type="radio" name="q14" value="a14-6">
-    雑談LINEは自分は送らないが相手から送られる分には気にしない
-  </label>
-
-  <label>
-    <input type="radio" name="q14" value="a14-7">
-    雑談LINEは送りたくないし送られるのも好きじゃない
-  </label>
-
-  <!-- Q15 -->
-  <label>Q15 今後デートで行きたいところはありますか？</label>
-  <input type="text" id="q15">
+ <label>
+   <input type="radio" name="q8" value="a8-5">
+   子どもをもつことは考えていない
+ </label>
 
 <div class="button-group">
 
-  <button id="submitBtn" type="button">
-    送信
-  </button>
+ <button id="submitBtn" type="button">
+   送信
+ </button>
 
-  <div class="sub-buttons">
+ <div class="sub-buttons">
 
-    <button id="draftBtn" type="button">
-      下書き保存
-    </button>
+   <button id="draftBtn" type="button">
+     下書き保存
+   </button>
 
-    <button id="clearBtn" type="button">
-      フォームクリア
-    </button>
+   <button id="clearBtn" type="button">
+     フォームクリア
+   </button>
 
-  </div>
+ </div>
 
 </div>
 
 <!-- 共有モーダル -->
 <div id="shareModal" class="modal hidden">
-  <div class="modal-content">
+ <div class="modal-content">
 
-    <h3>共有</h3>
+   <h3>共有</h3>
 
-    <input
-      id="shareName"
-      placeholder="共有名（任意）"
-    >
+   <input
+     id="shareName"
+     placeholder="共有名（任意）"
+   >
 
-    <button id="shareBtn">
-      共有する
-    </button>
+   <button id="shareBtn">
+     共有する
+   </button>
 
-  </div>
+ </div>
 </div>
 
 <script src="app.js"></script>
