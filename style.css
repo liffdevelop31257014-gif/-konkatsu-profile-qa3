@@ -59,7 +59,7 @@ body{
 }
 
 /********************************
- * 質問カード
+ * 質問
  ********************************/
 
 label{
@@ -68,11 +68,10 @@ label{
   margin-bottom:8px;
   font-size:15px;
   font-weight:600;
-  line-height:1.7;
+  line-height:1.8;
 }
 
 input[type="text"],
-input[type="time"],
 textarea{
   width:100%;
   padding:14px;
@@ -87,10 +86,16 @@ textarea{
   resize:vertical;
 }
 
-#q4Detail,
-#q7Detail{
-  margin:8px 0 8px 24px;
-  width:calc(100% - 24px);
+.detail-textarea{
+  width:100%;
+  min-height:90px;
+  padding:14px;
+  border:1px solid #f0c5cc;
+  border-radius:16px;
+  background:#fff;
+  font-size:15px;
+  resize:vertical;
+  margin:8px 0 12px 0;
 }
 
 /********************************
@@ -107,21 +112,60 @@ label:has(input[type="radio"]){
 }
 
 /********************************
- * スライダー
+ * 順位付けUI
  ********************************/
 
-.slider-labels{
-  display:flex;
-  justify-content:space-between;
+.ranking-group{
   margin-top:8px;
-  margin-bottom:8px;
-  color:#d96c7d;
-  font-weight:600;
 }
 
-input[type="range"]{
+.rank-option{
+  display:flex;
+  align-items:center;
+
+  gap:10px;
+
+  padding:8px 0;
+
+  background:none;
+  border:none;
+
   width:100%;
-  accent-color:#f48ca0;
+
+  text-align:left;
+  font-size:15px;
+
+  color:#444;
+
+  cursor:pointer;
+}
+
+.rank-number{
+  width:22px;
+  height:22px;
+
+  border-radius:50%;
+
+  border:1px solid #bdbdbd;
+
+  background:#fff;
+
+  color:transparent;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:11px;
+  font-weight:700;
+
+  flex-shrink:0;
+}
+
+.rank-option.selected .rank-number{
+  background:#0a84ff;
+  border-color:#0a84ff;
+  color:#fff;
 }
 
 /********************************
@@ -132,7 +176,6 @@ input[type="range"]{
   margin-top:40px;
 }
 
-/* 送信 */
 #submitBtn{
   width:100%;
   padding:18px;
@@ -151,14 +194,12 @@ input[type="range"]{
   opacity:.95;
 }
 
-/* 下段ボタン */
 .sub-buttons{
   display:flex;
   gap:12px;
   margin-top:12px;
 }
 
-/* 共通 */
 .sub-buttons button{
   flex:1;
   border-radius:12px;
@@ -167,7 +208,6 @@ input[type="range"]{
   transition:.2s;
 }
 
-/* 下書き保存 */
 #draftBtn{
   padding:14px;
   background:#fff;
@@ -176,7 +216,6 @@ input[type="range"]{
   font-size:15px;
 }
 
-/* フォームクリア */
 #clearBtn{
   padding:14px;
   background:#fafafa;
@@ -263,16 +302,9 @@ input[type="range"]{
   .form-description{
     font-size:13px;
   }
-}
 
-.detail-textarea{
-  width:100%;
-  min-height:20px;
-  padding:14px;
-  border:1px solid #f0c5cc;
-  border-radius:16px;
-  background:#fff;
-  font-size:15px;
-  resize:none;
-  margin:8px 0 12px 0;
+  .rank-option{
+    font-size:14px;
+    line-height:1.5;
+  }
 }
