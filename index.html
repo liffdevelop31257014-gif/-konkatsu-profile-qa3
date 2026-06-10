@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>婚活自己開示QA Part1</title>
+
+<link rel="stylesheet" href="style.css"/>
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- タイトル -->
+  <div class="form-header">
+
+    <h1>婚活 自己開示QA Part1</h1>
+
+    <p class="form-description">
+      本アンケートは、婚活・交際前の自己開示を目的としています。<br>
+      プライバシー保護：LINE IDはハッシュ化（暗号化）して保存されます。表示名・プロフィール画像・メールアドレスなどは取得されません。<br>
+      再回答について：同じLINEアカウントから回答された場合、以前の内容は上書きされます。
+    </p>
+
+  </div>
+
+  <!-- Q1 -->
+  <label>Q1 朝起きる時間は何時ですか？</label>
+  <input type="time" id="q1">
+
+  <!-- Q2 -->
+  <label>Q2 夜寝る時間は何時ですか？</label>
+  <input type="time" id="q2">
+
+  <!-- Q3 -->
+  <label>
+    Q3 仕事終わり、どんな過ごし方をしていますか？
+    将来の理想ではなく今どんな過ごし方を教えてください。
+  </label>
+  <textarea id="q3"></textarea>
+
+  <!-- Q4 -->
+  <label>
+    Q4 平日の朝いつもつけているニュース/ワイドショー番組はありますか？
+    あればどのチャンネル、番組名を教えてください。
+  </label>
+
+  <label>
+  <input type="radio" name="q4" value="yes">
+  あり
+</label>
+
+<textarea
+  id="q4Detail"
+  class="detail-textarea"
+  placeholder="番組名"
+></textarea>
+
+<label>
+  <input type="radio" name="q4" value="no">
+  なし
+</label>
+
+  <!-- Q5 -->
+  <label>Q5 子どもの頃好きだったテレビ番組は何ですか？</label>
+  <input type="text" id="q5">
+
+  <!-- Q6 -->
+  <label>Q6 これまでに呼ばれたことのあるあだ名は何ですか？</label>
+  <input type="text" id="q6">
+
+  <!-- Q7 -->
+  <label>
+    Q7 MBTI診断したことはありますか？
+    あればどのタイプだったか教えてください。
+  </label>
+
+  <label>
+  <input type="radio" name="q7" value="yes">
+  あり
+</label>
+
+<textarea
+  id="q7Detail"
+  class="detail-textarea"
+  placeholder="MBTIタイプ"
+></textarea>
+
+<label>
+  <input type="radio" name="q7" value="no">
+  なし
+</label>
+
+  <!-- Q8 -->
+  <label>Q8 ポジティブですか？ネガティブですか？</label>
+
+  <div class="slider-labels">
+    <span>ネガティブ</span>
+    <span>ポジティブ</span>
+  </div>
+
+  <input type="range" id="q8" min="1" max="5" step="1">
+
+  <!-- Q9 -->
+  <label>Q9 周囲の感情などを察する方ですか？</label>
+
+  <div class="slider-labels">
+    <span>察さない</span>
+    <span>察する</span>
+  </div>
+
+  <input type="range" id="q9" min="1" max="5" step="1">
+
+  <!-- Q10 -->
+  <label>Q10 部活動、サークル活動は何をしていましたか？</label>
+  <input type="text" id="q10">
+
+  <!-- Q11 -->
+  <label>Q11 どんなバイトをしたことがありますか？</label>
+  <input type="text" id="q11">
+
+  <!-- Q12 -->
+  <label>
+    Q12 休みの日に友人や家族と会うことはありますか？
+    ある場合はどんなことをすることが多いですか？
+  </label>
+  <textarea id="q12"></textarea>
+
+  <!-- Q13 -->
+  <label>
+    Q13 1人で過ごす時の休みの日の過ごし方を教えてください。
+  </label>
+  <textarea id="q13"></textarea>
+
+  <!-- Q14 -->
+  <label>Q14 LINEの頻度はどれくらいが理想ですか？</label>
+
+  <label>
+    <input type="radio" name="q14" value="a14-1">
+    返信まで6時間以内（朝LINEしたら昼までには返してほしい）
+  </label>
+
+  <label>
+    <input type="radio" name="q14" value="a14-2">
+    返信まで12時間以内（朝LINEしたら夜までには返してほしい）
+  </label>
+
+  <label>
+    <input type="radio" name="q14" value="a14-3">
+    返信まで24時間以内（朝LINEしたら翌朝までには返してほしい）
+  </label>
+
+  <label>
+    <input type="radio" name="q14" value="a14-4">
+    返信まで3日以内
+  </label>
+
+  <label>
+    <input type="radio" name="q14" value="a14-5">
+    相談事項には返信してほしいが雑談LINEには返信はあってもなくてもよい
+  </label>
+
+  <label>
+    <input type="radio" name="q14" value="a14-6">
+    雑談LINEは自分は送らないが相手から送られる分には気にしない
+  </label>
+
+  <label>
+    <input type="radio" name="q14" value="a14-7">
+    雑談LINEは送りたくないし送られるのも好きじゃない
+  </label>
+
+  <!-- Q15 -->
+  <label>Q15 今後デートで行きたいところはありますか？</label>
+  <input type="text" id="q15">
+
+<div class="button-group">
+
+  <button id="submitBtn" type="button">
+    送信
+  </button>
+
+  <div class="sub-buttons">
+
+    <button id="draftBtn" type="button">
+      下書き保存
+    </button>
+
+    <button id="clearBtn" type="button">
+      フォームクリア
+    </button>
+
+  </div>
+
+</div>
+
+<!-- 共有モーダル -->
+<div id="shareModal" class="modal hidden">
+  <div class="modal-content">
+
+    <h3>共有</h3>
+
+    <input
+      id="shareName"
+      placeholder="共有名（任意）"
+    >
+
+    <button id="shareBtn">
+      共有する
+    </button>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
