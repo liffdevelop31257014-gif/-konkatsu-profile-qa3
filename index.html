@@ -117,13 +117,17 @@
  placeholder="注意されること"
 ></textarea>
 
-<!-- Q3 -->
+<!—Q3 -->
+<label>Q3 人生で「一番大きな壁・挫折」だったと感じる出来事は何ですか？ </label>
+<textarea id="q3"></textarea>
+
+<!—Q4 -->
 <label>
-  Q3 次の働き方・休暇について、もし実現できたら嬉しい順に選択してください。<br>
+  Q4 次の働き方・休暇について、もし実現できたら嬉しい順に選択してください。<br>
 ただし、給料や日々の残業などは今と変わらないものとして考えてください。<br>
 （タップした順番が順位になります）
 </label>
-<div id="q3Ranking" class="ranking-group">
+<div id="q4Ranking" class="ranking-group">
 
 <button type="button" class="rank-option" data-value="水土日の週休3日制">
 <span class="rank-number"></span>
@@ -152,28 +156,28 @@
 
 </div>
 
-<!-- Q4 -->
+<!-- Q5 -->
 <label>
-  Q4 子どものころ、家族で出かけるときは車で出かけることが多かったですか？電車や飛行機、バスなどの公共交通機関が多かったですか？
+  Q5 子どものころ、家族で出かけるときは車で出かけることが多かったですか？電車や飛行機、バスなどの公共交通機関が多かったですか？
 </label>
 
  <label>
-  <input type="radio" name="q4" value="a4-1">
+  <input type="radio" name="q5" value="a5-1">
  車が多かった
 </label>
 
   <label>
-  <input type="radio" name="q4"  value="a4-2">
+  <input type="radio" name="q5"  value="a5-2">
 公共交通機関が多かった
 </label>
 
-<!-- Q5 -->
+<!-- Q6 -->
 <label>
-  Q5 次の中でも手に入るとしたら嬉しい順に選択ください。<br>
+  Q6 次の中でも手に入るとしたら嬉しい順に選択ください。<br>
 （タップした順番が順位になります）
 </label>
 
-<div id="q5Ranking" class="ranking-group">
+<div id="q6Ranking" class="ranking-group">
 
 <button type="button" class="rank-option" data-value="老若男女問わず褒められる">
 <span class="rank-number"></span>
@@ -222,121 +226,121 @@
 
 </div>
 
-<!-- Q6 -->
-<label>Q6 結婚したら2人でしたいことは何ですか？</label>
-<textarea id="q6"></textarea>
-
 <!-- Q7 -->
-<label>Q7 子どもが生まれたら家族でしたいことは何ですか？</label>
- <textarea id="q7"></textarea>
+<label>Q7 結婚したら2人でしたいことは何ですか？</label>
+<textarea id="q7"></textarea>
 
 <!-- Q8 -->
+<label>Q8 子どもが生まれたら家族でしたいことは何ですか？</label>
+ <textarea id="q8"></textarea>
+
+<!—Q9 -->
 <label>
-  Q8 記念日や誕生日、クリスマスなどのイベントごとはどう過ごしたいタイプですか？当てはまるもの全て選んでください。
+  Q9 記念日や誕生日、クリスマスなどのイベントごとはどう過ごしたいタイプですか？当てはまるもの全て選んでください。
 </label>
 
  <label>
-  <input type="radio" name="q8" value="a4-1">
+  <input type="radio" name="q9" value="a9-1">
  全部旅行に行ったりご馳走を食べに行くなどして祝いたい
 </label>
 
   <label>
-  <input type="radio" name="q8"  value="a4-2">
+  <input type="radio" name="q9"  value="a9-2">
 全部ではなくていいがどれかは旅行に行ったりご馳走を食べに行くなどして祝いたい
 </label>
 
 <label>
-  <input type="radio" name="q8"  value="a4-2">
+  <input type="radio" name="q9"  value="a9-2">
 旅行や外食よりも家で祝いたい
 </label>
 
 <label>
-  <input type="radio" name="q8"  value="a4-2">
+  <input type="radio" name="q9"  value="a9-2">
 毎回プレゼントを贈りあいたい
 </label>
 
 <label>
-  <input type="radio" name="q8"  value="a4-2">
+  <input type="radio" name="q9"  value="a9-2">
 毎回ではなくてもいいがプレゼントを贈りあいたい
 </label>
 
 <label>
-  <input type="radio" name="q8"  value="a4-2">
+  <input type="radio" name="q9"  value="a9-2">
 出かけたりプレゼントを用意したりはいらないが、一言お祝いの言葉はほしい
 </label>
 
 <label>
-  <input type="radio" name="q8"  value="a4-2">
+  <input type="radio" name="q9"  value="a9-2">
 記念日やその付近でのデートでも普段どおりの生活で良い
 </label>
 
   <textarea
-    id="q8Detail"
+    id="q9Detail"
     class="detail-textarea"
     placeholder="プレゼント代"
   ></textarea>
 
-<!-- Q9 -->
+<!-- Q10 -->
 <label>
-  Q9 小学校低学年の息子がいます。学校での様子を聞くと友人もいて楽しく過ごしているようです。<br>
+  Q10 小学校低学年の息子がいます。学校での様子を聞くと友人もいて楽しく過ごしているようです。<br>
 学校終わりや週末は家の中で1人でゲームをしたり動画を見ているだけなので習い事に通わせようか迷っています。<br>
 本人には習い事に興味がないか聞きましたが、今は興味がないと言われました。<br>
 このときどうしますか？
 </label>
 
  <label>
-  <input type="radio" name="q9" value="a7-1">
+  <input type="radio" name="q10" value="a10-1">
   同年代男子に人気な習い事を調べていくつか見学に連れて行く
 </label>
 
 <label>
-  <input type="radio" name="q9" value="a7-2">
+  <input type="radio" name="q10" value="a10-2">
   同年代男子に人気な習い事を調べて資料を見せる
 </label>
 
 <label>
-  <input type="radio" name="q9" value="a7-3">
+  <input type="radio" name="q10" value="a10-3">
   自分が過去に通っていた習い事の話をしてみる
 </label>
 
 <label>
-  <input type="radio" name="q9" value="a7-4">
+  <input type="radio" name="q10" value="a10-4">
   興味がわいたら通わせられるように準備をしつつ今は息子にはこれ以上声かけはしない
 </label>
 
  <label>
-  <input type="radio" name="q9" value="a7-5">
+  <input type="radio" name="q10" value="a10-5">
   子どもをもつことは考えていない
 </label>
 
-<!-- Q10 -->
-<label>Q10 高校生の娘がいます。この子は今まで非行に走ったことなどはありません。<br>
+<!-- Q11 -->
+<label>Q11 高校生の娘がいます。この子は今まで非行に走ったことなどはありません。<br>
 たまたま夫婦ともに夜遅くなる日ができてしまいました。<br>
 いつもは娘の塾が21時に終わるので迎えに行っていましたが、この日はどうしますか？</label>
 
 <label>
-  <input type="radio" name="q10" value="a8-1">
+  <input type="radio" name="q11" value="a11-1">
   その日だけは娘1人で帰らせる
 </label>
 
 <label>
-  <input type="radio" name="q10" value="a8-2">
+  <input type="radio" name="q11" value="a11-2">
   親戚か友人などに迎えに行ってもらうように頼む
 </label>
 
 <label>
-  <input type="radio" name="q10" value="a8-3">
+  <input type="radio" name="q11" value="a11-3">
   送迎サービスを探し、お金を払って利用する
 </label>
 
 <label>
-  <input type="radio" name="q10" value="a8-4">
+  <input type="radio" name="q11" value="a11-4">
   夫婦どちらかは間に合うように何がなんでも調整する
 </label>
 
 
 <label>
-  <input type="radio" name="q10" value="a8-5">
+  <input type="radio" name="q11" value="a11-5">
   子どもをもつことは考えていない
 </label>
 
