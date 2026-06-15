@@ -10,59 +10,59 @@
 
 <style>
 /* ============================================================
-   ビューモード（共有リンクで開いたとき）
-   ============================================================ */
+  ビューモード（共有リンクで開いたとき）
+  ============================================================ */
 
 #viewMode {
-  display: none;
+ display: none;
 }
 
 .view-header {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 20px 24px;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  text-align: center;
+ background: #ffffff;
+ border-radius: 16px;
+ padding: 20px 24px;
+ margin-bottom: 16px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+ text-align: center;
 }
 
 .view-label {
-  margin: 0 0 6px;
-  font-size: 13px;
-  color: #aaa;
-  letter-spacing: 0.05em;
+ margin: 0 0 6px;
+ font-size: 13px;
+ color: #aaa;
+ letter-spacing: 0.05em;
 }
 
 .view-name {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 700;
-  color: #d96c7d;
+ margin: 0;
+ font-size: 20px;
+ font-weight: 700;
+ color: #d96c7d;
 }
 
 .view-item {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 18px 20px;
-  margin-bottom: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+ background: #ffffff;
+ border-radius: 16px;
+ padding: 18px 20px;
+ margin-bottom: 12px;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .view-question {
-  margin: 0 0 8px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #d96c7d;
-  line-height: 1.6;
+ margin: 0 0 8px;
+ font-size: 14px;
+ font-weight: 600;
+ color: #d96c7d;
+ line-height: 1.6;
 }
 
 .view-answer {
-  margin: 0;
-  font-size: 15px;
-  color: #444;
-  line-height: 1.8;
-  white-space: pre-wrap;
-  word-break: break-word;
+ margin: 0;
+ font-size: 15px;
+ color: #444;
+ line-height: 1.8;
+ white-space: pre-wrap;
+ word-break: break-word;
 }
 </style>
 </head>
@@ -71,59 +71,59 @@
 
 <div class="container">
 
- <!-- タイトル -->
- <div class="form-header">
+<!-- タイトル -->
+<div class="form-header">
 
-   <h1>婚活 自己開示QA Part3</h1>
+  <h1>婚活 自己開示QA Part3</h1>
 
-   <p class="form-description">
-     本アンケートは、婚活・交際前の自己開示を目的としています。<br>
-     プライバシー保護：LINE IDはハッシュ化（暗号化）して保存されます。表示名・プロフィール画像・メールアドレスなどは取得されません。<br>
-     再回答について：同じLINEアカウントから回答された場合、以前の内容は上書きされます。
-   </p>
+  <p class="form-description">
+    本アンケートは、婚活・交際前の自己開示を目的としています。<br>
+    プライバシー保護：LINE IDはハッシュ化（暗号化）して保存されます。表示名・プロフィール画像・メールアドレスなどは取得されません。<br>
+    再回答について：同じLINEアカウントから回答された場合、以前の内容は上書きされます。
+  </p>
 
- </div>
+</div>
 
- <!-- ビューモード表示エリア（共有リンクで開いたとき） -->
- <div id="viewMode"></div>
+<!-- ビューモード表示エリア（共有リンクで開いたとき） -->
+<div id="viewMode"></div>
 
- <!-- Q1 -->
- <label>Q1 会社でどんなことを褒められますか？また、注意されることはなんですか？</label>
-
-<textarea
-  id="q1good"
-  class="detail-textarea"
-  placeholder="褒められること"
-></textarea>
+<!-- Q1 -->
+<label>Q1 会社でどんなことを褒められますか？また、注意されることはなんですか？</label>
 
 <textarea
-  id="q1bad"
-  class="detail-textarea"
-  placeholder="注意されること"
-></textarea>
-
-
- <!-- Q2 -->
- <label>友人や元恋人からどんなことを褒められますか？また、注意されることはなんですか？</label>
- <textarea
-  id="q2good"
-  class="detail-textarea"
-  placeholder="褒められること"
+ id="q1good"
+ class="detail-textarea"
+ placeholder="褒められること"
 ></textarea>
 
 <textarea
-  id="q2bad"
-  class="detail-textarea"
-  placeholder="注意されること"
+ id="q1bad"
+ class="detail-textarea"
+ placeholder="注意されること"
 ></textarea>
 
- <!-- Q3 -->
- <label>
-   Q3 次の働き方・休暇について、もし実現できたら嬉しい順に選択してください。<br>
+
+<!-- Q2 -->
+<label>Q2 友人や元恋人からどんなことを褒められますか？また、注意されることはなんですか？</label>
+<textarea
+ id="q2good"
+ class="detail-textarea"
+ placeholder="褒められること"
+></textarea>
+
+<textarea
+ id="q2bad"
+ class="detail-textarea"
+ placeholder="注意されること"
+></textarea>
+
+<!-- Q3 -->
+<label>
+  Q3 次の働き方・休暇について、もし実現できたら嬉しい順に選択してください。<br>
 ただし、給料や日々の残業などは今と変わらないものとして考えてください。<br>
 （タップした順番が順位になります）
- </label>
- <div id="q3Ranking" class="ranking-group">
+</label>
+<div id="q3Ranking" class="ranking-group">
 
 <button type="button" class="rank-option" data-value="水土日の週休3日制">
 <span class="rank-number"></span>
@@ -152,13 +152,28 @@
 
 </div>
 
- <!-- Q4 -->
- <label>
-   Q4 次の中でも手に入るとしたら嬉しい順に選択ください。<br>
-（タップした順番が順位になります）
- </label>
+<!-- Q4 -->
+<label>
+  Q4 子どものころ、家族で出かけるときは車で出かけることが多かったですか？電車や飛行機、バスなどの公共交通機関が多かったですか？
+</label>
 
-<div id="q4Ranking" class="ranking-group">
+ <label>
+  <input type="radio" name="q4" value="a4-1">
+ 車が多かった
+</label>
+
+  <label>
+  <input type="radio" name="q4"  value="a4-2">
+公共交通機関が多かった
+</label>
+
+<!-- Q5 -->
+<label>
+  Q5 次の中でも手に入るとしたら嬉しい順に選択ください。<br>
+（タップした順番が順位になります）
+</label>
+
+<div id="q5Ranking" class="ranking-group">
 
 <button type="button" class="rank-option" data-value="老若男女問わず褒められる">
 <span class="rank-number"></span>
@@ -207,114 +222,167 @@
 
 </div>
 
- <!-- Q5 -->
- <label>Q5 結婚したら2人でしたいことは何ですか？</label>
- <textarea id="q5"></textarea>
+<!-- Q6 -->
+<label>Q6 結婚したら2人でしたいことは何ですか？</label>
+<textarea id="q6"></textarea>
 
- <!-- Q6 -->
- <label>Q6 子どもが生まれたら家族でしたいことは何ですか？</label>
-  <textarea id="q6"></textarea>
+<!-- Q7 -->
+<label>Q7 子どもが生まれたら家族でしたいことは何ですか？</label>
+ <textarea id="q7"></textarea>
 
- <!-- Q7 -->
+<!-- Q8 -->
+<label>
+  Q8 記念日や誕生日、クリスマスなどのイベントごとはどう過ごしたいタイプですか？当てはまるもの全て選んでください。
+</label>
+
  <label>
-   Q7 小学校低学年の息子がいます。学校での様子を聞くと友人もいて楽しく過ごしているようです。<br>
+  <input type="radio" name="q8" value="a4-1">
+ 全部旅行に行ったりご馳走を食べに行くなどして祝いたい
+</label>
+
+  <label>
+  <input type="radio" name="q8"  value="a4-2">
+全部ではなくていいがどれかは旅行に行ったりご馳走を食べに行くなどして祝いたい
+</label>
+
+<label>
+  <input type="radio" name="q8"  value="a4-2">
+旅行や外食よりも家で祝いたい
+</label>
+
+<label>
+  <input type="radio" name="q8"  value="a4-2">
+毎回プレゼントを贈りあいたい
+</label>
+
+<label>
+  <input type="radio" name="q8"  value="a4-2">
+毎回ではなくてもいいがプレゼントを贈りあいたい
+</label>
+
+<label>
+  <input type="radio" name="q8"  value="a4-2">
+出かけたりプレゼントを用意したりはいらないが、一言お祝いの言葉はほしい
+</label>
+
+<label>
+  <input type="radio" name="q8"  value="a4-2">
+記念日やその付近でのデートでも普段どおりの生活で良い
+</label>
+
+<!-- Q9 -->
+<label>
+  Q9 記念日や誕生日、クリスマスなどの
+ <label>
+  <input type="radio" name="q9" value="a4-1">
+ 車が多かった
+</label>
+
+  <label>
+  <input type="radio" name="q9"  value="a4-2">
+公共交通機関が多かった
+</label>
+
+<!-- Q10 -->
+<label>
+  Q10 小学校低学年の息子がいます。学校での様子を聞くと友人もいて楽しく過ごしているようです。<br>
 学校終わりや週末は家の中で1人でゲームをしたり動画を見ているだけなので習い事に通わせようか迷っています。<br>
 本人には習い事に興味がないか聞きましたが、今は興味がないと言われました。<br>
 このときどうしますか？
- </label>
-
-  <label>
-   <input type="radio" name="q7" value="a7-1">
-   同年代男子に人気な習い事を調べていくつか見学に連れて行く
- </label>
+</label>
 
  <label>
-   <input type="radio" name="q7" value="a7-2">
-   同年代男子に人気な習い事を調べて資料を見せる
- </label>
+  <input type="radio" name="q10" value="a7-1">
+  同年代男子に人気な習い事を調べていくつか見学に連れて行く
+</label>
+
+<label>
+  <input type="radio" name="q10" value="a7-2">
+  同年代男子に人気な習い事を調べて資料を見せる
+</label>
+
+<label>
+  <input type="radio" name="q10" value="a7-3">
+  自分が過去に通っていた習い事の話をしてみる
+</label>
+
+<label>
+  <input type="radio" name="q10" value="a7-4">
+  興味がわいたら通わせられるように準備をしつつ今は息子にはこれ以上声かけはしない
+</label>
 
  <label>
-   <input type="radio" name="q7" value="a7-3">
-   自分が過去に通っていた習い事の話をしてみる
- </label>
+  <input type="radio" name="q10" value="a7-5">
+  子どもをもつことは考えていない
+</label>
 
- <label>
-   <input type="radio" name="q7" value="a7-4">
-   興味がわいたら通わせられるように準備をしつつ今は息子にはこれ以上声かけはしない
- </label>
-
-  <label>
-   <input type="radio" name="q7" value="a7-5">
-   子どもをもつことは考えていない
- </label>
-
- <!-- Q8 -->
- <label>Q8 高校生の娘がいます。この子は今まで非行に走ったことなどはありません。<br>
+<!-- Q11 -->
+<label>Q11 高校生の娘がいます。この子は今まで非行に走ったことなどはありません。<br>
 たまたま夫婦ともに夜遅くなる日ができてしまいました。<br>
 いつもは娘の塾が21時に終わるので迎えに行っていましたが、この日はどうしますか？</label>
 
 <label>
-   <input type="radio" name="q8" value="a8-1">
-   その日だけは娘1人で帰らせる
- </label>
-
- <label>
-   <input type="radio" name="q8" value="a8-2">
-   親戚か友人などに迎えに行ってもらうように頼む
- </label>
+  <input type="radio" name="q11" value="a8-1">
+  その日だけは娘1人で帰らせる
+</label>
 
 <label>
-   <input type="radio" name="q8" value="a8-3">
-   送迎サービスを探し、お金を払って利用する
- </label>
+  <input type="radio" name="q11" value="a8-2">
+  親戚か友人などに迎えに行ってもらうように頼む
+</label>
 
- <label>
-   <input type="radio" name="q8" value="a8-4">
-   夫婦どちらかは間に合うように何がなんでも調整する
- </label>
+<label>
+  <input type="radio" name="q11" value="a8-3">
+  送迎サービスを探し、お金を払って利用する
+</label>
+
+<label>
+  <input type="radio" name="q11" value="a8-4">
+  夫婦どちらかは間に合うように何がなんでも調整する
+</label>
 
 
- <label>
-   <input type="radio" name="q8" value="a8-5">
-   子どもをもつことは考えていない
- </label>
+<label>
+  <input type="radio" name="q11" value="a8-5">
+  子どもをもつことは考えていない
+</label>
 
 <div class="button-group">
 
- <button id="submitBtn" type="button">
-   送信
- </button>
+<button id="submitBtn" type="button">
+  送信
+</button>
 
- <div class="sub-buttons">
+<div class="sub-buttons">
 
-   <button id="draftBtn" type="button">
-     下書き保存
-   </button>
+  <button id="draftBtn" type="button">
+    下書き保存
+  </button>
 
-   <button id="clearBtn" type="button">
-     フォームクリア
-   </button>
+  <button id="clearBtn" type="button">
+    フォームクリア
+  </button>
 
- </div>
+</div>
 
 </div>
 
 <!-- 共有モーダル -->
 <div id="shareModal" class="modal hidden">
- <div class="modal-content">
+<div class="modal-content">
 
-   <h3>共有</h3>
+  <h3>共有</h3>
 
-   <input
-     id="shareName"
-     placeholder="共有名（任意）"
-   >
+  <input
+    id="shareName"
+    placeholder="共有名（任意）"
+  >
 
-   <button id="shareBtn">
-     共有する
-   </button>
+  <button id="shareBtn">
+    共有する
+  </button>
 
- </div>
+</div>
 </div>
 
 <script src="app.js"></script>
