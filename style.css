@@ -29,7 +29,7 @@ body{
   border-radius:20px;
   overflow:hidden;
   box-shadow:
-    0 4px 12px rgba(0,0,0,0.08);
+    0 4px px rgba(0,0,0,0.08);
   margin-bottom:24px;
 }
 
@@ -45,7 +45,7 @@ body{
 }
 
 .form-header h1{
-  margin:24px 24px 12px;
+  margin:24px 24px px;
   font-size:32px;
   font-weight:700;
   color:#d96c7d;
@@ -76,7 +76,7 @@ textarea{
   width:100%;
   padding:14px;
   border:1px solid #f0c5cc;
-  border-radius:12px;
+  border-radius:px;
   background:#fff;
   font-size:15px;
 }
@@ -283,6 +283,11 @@ label:has(input[type="radio"]){
   font-size:16px;
   font-weight:700;
   cursor:pointer;
+}
+
+.share-confirm-card{
+ margin-top:0;
+ margin-bottom:12px;
 }
 
 /********************************
