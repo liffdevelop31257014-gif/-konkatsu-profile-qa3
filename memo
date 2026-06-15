@@ -1,4 +1,5 @@
 以下のHTML、CSS、app.jsのフォームについても、part1での変更を行った点を反映したものになるよう、必要に応じてHTML、CSS、app.jsを修正して出力してください。
+なお、Q9についてはa9-4,a9-5のいずれかを選択した場合にかぎりdetail自由記述欄が出てくるようにしてください。
 
 
 HTML
@@ -255,27 +256,27 @@ HTML
 </label>
 
 <label>
-  <input type="radio" name="q9"  value="a9-2">
+  <input type="radio" name="q9"  value="a9-3">
 旅行や外食よりも家で祝いたい
 </label>
 
 <label>
-  <input type="radio" name="q9"  value="a9-2">
+  <input type="radio" name="q9"  value="a9-4">
 毎回プレゼントを贈りあいたい
 </label>
 
 <label>
-  <input type="radio" name="q9"  value="a9-2">
+  <input type="radio" name="q9"  value="a9-5">
 毎回ではなくてもいいがプレゼントを贈りあいたい
 </label>
 
 <label>
-  <input type="radio" name="q9"  value="a9-2">
+  <input type="radio" name="q9"  value="a9-6">
 出かけたりプレゼントを用意したりはいらないが、一言お祝いの言葉はほしい
 </label>
 
 <label>
-  <input type="radio" name="q9"  value="a9-2">
+  <input type="radio" name="q9"  value="a9-7">
 記念日やその付近でのデートでも普段どおりの生活で良い
 </label>
 
