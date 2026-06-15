@@ -208,6 +208,7 @@ function collectFormData() {
     q9Detail: document.getElementById("q9Detail").value,
     q10: q10Radio ? q10Radio.value : "",
     q11: q11Radio ? q11Radio.value : "",
+    q12:  document.getElementById("q12").value
   };
 }
 
@@ -229,6 +230,7 @@ function restoreFormData(data) {
   setText("q3",     data.q3);
   setText("q7",     data.q7);
   setText("q8",     data.q8);
+  setText("q12",     data.q１２);
 
   restoreRankingGroup("q4Ranking", data.q4);
   restoreRankingGroup("q6Ranking", data.q6);
@@ -286,6 +288,8 @@ function validate(data) {
   if (!data.q10) errors.push("Q10: 回答を選択してください。");
   if (!data.q11) errors.push("Q11: 回答を選択してください。");
 
+if (!data.q12.trim())          errors.push("Q12: 夫婦や家族のなかで守っていきたいルール、家訓を入力してください。");
+
   return errors;
 }
 
@@ -295,7 +299,7 @@ function validate(data) {
 const SHARE_KEY_MAP = {
   q1good: "a", q1bad: "b", q2good: "c", q2bad: "d", q3: "e",
   q4: "f", q5: "g", q6: "h", q7: "i", q8: "j",
-  q9: "k", q9Detail: "l", q10: "m", q11: "n", _shareName: "o",
+  q9: "k", q9Detail: "l", q10: "m", q11: "n", q12: "o", _shareName: "p",
 };
 const SHARE_KEY_MAP_REVERSE = Object.fromEntries(
   Object.entries(SHARE_KEY_MAP).map(([k, v]) => [v, k])
@@ -423,7 +427,8 @@ function renderViewMode(data, options = {}) {
       html: q9AnswerHTML(data) },
     { q: "Q10 習い事に興味がない息子にどうしますか？", a: q10Labels[data.q10] || "未回答" },
     { q: "Q11 塾の迎えに行けない日、どうしますか？", a: q11Labels[data.q11] || "未回答" },
-  ];
+  ] ,
+{ q: "Q12 夫婦や家族のなかで守っていきたいルール、家訓はありますか？", a: data.q12 || "未回答" };
 
   // フォーム要素を非表示
   document.querySelectorAll(
@@ -600,7 +605,7 @@ async function sendNextPartMessage() {
   document.getElementById("clearBtn").addEventListener("click", () => {
     if (!confirm("入力内容をすべてクリアしますか？")) return;
 
-    ["q1good","q1bad","q2good","q2bad","q3","q7","q8","q9Detail"].forEach(id => {
+    ["q1good","q1bad","q2good","q2bad","q3","q7","q8","q9Detail","q12" ]. forEach (id => {
       const el = document.getElementById(id);
       if (el) el.value = "";
     });
