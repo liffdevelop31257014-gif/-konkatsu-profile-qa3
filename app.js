@@ -300,7 +300,7 @@ function validate(data) {
   if (!data.q9 || data.q9.length === 0)
     errors.push("Q9: イベントごとの過ごし方を選択してください（複数選択可）。");
   if ((data.q9.includes("a9-4") || data.q9.includes("a9-5")) && !data.q9Detail.trim())
-    errors.push("Q9: プレゼントの詳細を入力してください。");
+    errors.push("Q9: 理想のプレゼント代を入力してください。");
 
   if (!data.q10) errors.push("Q10: 回答を選択してください。");
   if (!data.q11) errors.push("Q11: 回答を選択してください。");
@@ -377,7 +377,7 @@ function q9AnswerHTML(data) {
   if (values.length === 0) return "未回答";
   let html = values.map((v) => `・${escapeHTML(Q9_LABELS[v] || v)}`).join("<br>");
   if ((values.includes("a9-4") || values.includes("a9-5")) && data.q9Detail) {
-    html += `<br>（詳細：${escapeHTML(data.q9Detail)}）`;
+    html += `<br>（プレゼント代：${escapeHTML(data.q9Detail)}）`;
   }
   return html;
 }
