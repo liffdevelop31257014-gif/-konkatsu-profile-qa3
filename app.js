@@ -302,6 +302,7 @@ function validate(data) {
 
   if (!data.q10) errors.push("Q10: 回答を選択してください。");
   if (!data.q11) errors.push("Q11: 回答を選択してください。");
+　if (!data.q12.trim())          errors.push("Q12: 夫婦や家族のなかで守っていきたいルール、家訓を入力してください。");
 
   return errors;
 }
@@ -425,6 +426,7 @@ function renderViewMode(data, options = {}) {
       html: q9AnswerHTML(data) },
     { q: "Q10 習い事に興味がない息子にどうしますか？", a: q10Labels[data.q10] || "未回答" },
     { q: "Q11 塾の迎えに行けない日、どうしますか？",  a: q11Labels[data.q11] || "未回答" },
+    { q: "夫婦や家族のなかで守っていきたいルール、家訓はありますか？",  a: data.q12 || "未回答" },
   ];
 
   // フォーム要素を非表示
